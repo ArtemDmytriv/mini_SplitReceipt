@@ -1,9 +1,12 @@
+from .expanse import Expanse
 
 class Person:
     def __init__(self, name: str) -> None:
         self.name = name
-        self.expansed = 0 
-        self.spend = 0
+        self.expanses: list[Expanse] = [] 
+
+    def add_expanse(self, ex: Expanse):
+        self.expanses.append(ex)
 
     def __str__(self) -> str:
-        return f"{self.name} = [+{self.expansed},-{self.spend}]"
+        return f"{self.name} = [+{[str(exp) for exp in self.expanses]}]"
