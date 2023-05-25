@@ -1,5 +1,5 @@
 package*
-telebot
+telebot_env
 token.txt
 
 # Byte-compiled / optimized / DLL files
